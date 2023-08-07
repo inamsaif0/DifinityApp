@@ -1,0 +1,58 @@
+﻿@page "/"
+
+<style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px solid #ccc;
+    }
+</style>
+
+<div class="container">
+    <textarea readonly rows="12">@Output</textarea>
+    <br /><br />
+
+    <button @onclick="Test">Test</button><br /><br />
+    <button @onclick="WriteData">Write Data</button><br /><br />
+    <button @onclick="GetData">Get Data</button><br /><br />
+
+    <hr />
+
+    <button @onclick="IsLoggedIn">Is logged in?</button><br /><br />
+    <button @onclick="Login">Login</button><br /><br />
+    <button @onclick="Logout">LogOut</button><br /><br />
+
+    <hr />
+
+    <button @onclick="WriteDataForUser">Write Data for logged in user</button><br /><br />
+    <button @onclick="GetDataForUser">Get Data for logged in user</button>
+</div>
